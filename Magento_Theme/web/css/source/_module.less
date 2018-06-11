@@ -339,6 +339,39 @@
 }
 
 //
+//  Mobile
+//  ---------------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-header {
+        .header.content {
+            display: grid;
+            grid-template-columns: 28px 1fr 35px minmax(35px, auto);
+            grid-template-areas: "toggle logo search cart";
+            grid-gap: @indent__s;
+
+            .nav-toggle {
+                position: relative;
+                top: auto;
+                left: auto;
+                grid-area: toggle;
+            }
+            .logo {
+                grid-area: logo;
+            }
+            .minicart-wrapper {
+                grid-area: cart;
+            }
+            .block-search {
+                grid-area: search;
+            }
+            .block-search .control {
+                margin: 0 -15px 0 -150px;
+            }
+        }
+    }
+}
+
+//
 //  Desktop
 //  _____________________________________________
 
