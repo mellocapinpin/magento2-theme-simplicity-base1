@@ -25,12 +25,12 @@
 @message-global-caution-link__color-active: @link__active__color;
 
 //  Header
-@header__background-color: false;
+@header__background-color: @theme_color_background;
 @header-icons-color: @color-gray56;
 @header-icons-color-hover: @color-gray20;
 
-@header-panel__background-color: false;
-@header-panel__text-color: @text__color;
+@header-panel__background-color: @theme_color_secondary;
+@header-panel__text-color: @theme_color_secondary_reverse;
 @header-panel__height: 40px;
 
 @addto-color: @text__color__muted;
@@ -48,16 +48,16 @@
 @navigation-desktop__background__wide: @primary__color;
 
 //  Footer
-@footer__background-color: false;
+@footer__background-color: @theme_color_primary;
 
-@footer-block__title-color: @primary__color;
-@footer-block__content-color: @primary__color;
+@footer-block__title-color: @theme_color_primary_reverse;
+@footer-block__content-color: @theme_color_primary_reverse;
 
-@footer-link__color: @primary__color;
-@footer-link__hover__color: @link__color;
+@footer-link__color: @theme_color_primary_reverse;
+@footer-link__hover__color: @theme_color_secondary_reverse;
 
-@footer-copyright__color: @text__color;
-@footer-copyright__background-color: @footer__background-color;
+@footer-copyright__color: @theme_color_secondary_reverse;
+@footer-copyright__background-color: false;
 
 @footer-links-separator-border: none;
 
@@ -217,7 +217,7 @@
                     .lib-css(color, @footer-block__title-color);
                     font-family: @font-family__primary;
                     font-weight: @font-weight__light;
-                    font-size: @font-size__base;
+                    font-size: @font-size__l;
                     text-transform: uppercase;
                 }
             }
@@ -231,7 +231,7 @@
                 }
                 li {
                     margin-bottom: @indent__s;
-                    line-height: @line-height__l;
+                    line-height: @line-height__xl;
                 }
                 a {
                     .lib-css(color, @footer-link__color);
@@ -242,6 +242,7 @@
             }
         }
         .copyright {
+            line-height: @line-height__base;
             .lib-css(color, @footer-copyright__color);
             .lib-css(background, @footer-copyright__background-color);
         }
